@@ -1,0 +1,57 @@
+@import './base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  /* margin: 0 auto; */
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+    width: 100vw;
+  }
+}
+header {
+  background-color: red;
+  width: 100vw;
+}
+#cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 한 줄에 4개의 컬럼 */
+  gap: 20px; /* 그리드 항목 사이의 간격 (16px) */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  height: 100vh; /* 뷰포트 높이 100% */
+  div {
+    background-color: #f0f0f0; /* 항목 배경색 */
+    padding: 10px; /* 항목 패딩 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    border: 1px solid #ccc; /* 항목 테두리 */
+    border-radius: 8px; /* 항목 모서리 둥글게 */
+  }
+}
